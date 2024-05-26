@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caja y Elementos Inline/Bloque</title>
+    <style>
+        /* Estilos para el modelo de caja */
+        .box {
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            border: 2px solid #0000FF;
+            margin: 20px;
+            background-color: #F0F0F0;
+        }
+
+        /* Elementos de bloque */
+        .block-element {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #FF0000;
+            margin-bottom: 10px;
+            background-color: #FFD700;
+        }
+
+        /* Elementos en línea */
+        .inline-element {
+            display: inline;
+            padding: 5px;
+            border: 1px solid #008000;
+            background-color: #ADFF2F;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo del Modelo de Caja</h1>
+    <div class="box">
+        Este es un div con padding, borde y margen.
+    </div>
+
+    <h1>Elementos de Bloque vs. Elementos en Línea</h1>
+    
+    <!-- Elementos de bloque -->
+    <div class="block-element">Bloque 1</div>
+    <div class="block-element">Bloque 2</div>
+    <div class="block-element">Bloque 3</div>
+
+    <!-- Elementos en línea -->
+    <p>
+        Este es un párrafo con <span class="inline-element">elemento en línea 1</span> y 
+        <span class="inline-element">elemento en línea 2</span>.
+    </p>
+</body>
+</html>
