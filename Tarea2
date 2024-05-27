@@ -1,20 +1,131 @@
 <!DOCTYPE html>
-<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de Caja</title>
+    <title>Modelo de Caja y Elementos Inline/Bloque</title>
     <style>
+        /* Estilos para el modelo de caja */
         .box {
             width: 200px;
             height: 100px;
+            padding: 20px;
+            border: 2px solid #0000FF;
+            margin: 2px;
+            background-color: #3ba599;
+        }
+
+        /* Elementos de bloque con fondo amarillo y borde rojo*/
+        .block-element {
+            display: block;
+            width: 100%;
             padding: 10px;
-            border: 2px solid blue;
-            margin: 20px;
+            border: 1px solid #FF0000;
+            margin-bottom: 10px;
+            background-color: #FFD700;
+        }
+
+        /* Elementos en línea con fondo verde claro y borde verde oscuro*/
+        .inline-element {
+            display: inline;
+            padding: 5px;
+            border: 1px solid #008000;
+            background-color: #ADFF2F;
         }
     </style>
 </head>
 <body>
-    <div class="box">Este es un ejemplo del Modelo de Caja.</div>
+    <h1>Ejemplo del Modelo de Caja</h1>
+    <div class="box">
+        Este es un div con padding, borde y margen.
+    </div>
+
+    <h1>Elementos de Bloque vs elementos en Línea</h1>
+    
+    <!-- Elementos de bloque -->
+    <div class="block-element">Bloque 1</div>
+    <div class="block-element">Bloque 2</div>
+    <div class="block-element">Bloque 3</div>
+
+    <!-- Elementos en línea -->
+    <p>
+        Este es un párrafo con <span class="inline-element">elemento en línea 1</span> y 
+        <span class="inline-element">elemento en línea 2</span>.
+    </p>
+
+
+     <!--Es para tener un elementos-->
+     <div style="position: static;">Estático</div>
+     <div style="position: relative; top: 50px; left: 300px;">Relativo</div>
+     <div style="position: relative;">
+        <div style="position: absolute; top: 60px; left: 500px;">Absoluto</div>
+      </div>      
+     <div style="position: fixed; top: 0; left: 50%;">Fijo</div>    
+            
+    <!--Float-->
+    <div style="float: left;">Flotante a la izquierda</div>
+    <div style="float: right;">Flotante a la derecha</div>
+
+    <!--Clear-->
+    <div style="float: left;">Flotante en la parte izquierda</div>
+    <div style="clear: both;">Limpia los flotantes</div>
+    
+    <!--Display block-->
+    <div style="display: block;">Display block</div>
+
+    <!--Display Inline-->
+    <span style="display: inline;">Display inline</span>
+
+    <!--Inline-block-->
+    <div style="display: inline-block; width: 100px;">Inline-block</div>
+
+    <!--Oculto-->
+    <div style="display: none;">Oculto</div>
+
+
+
+
+    <!--Overflow-->
+    <!--Visible-->
+    <div style="overflow: visible; width: 100px; height: 50px;">
+        Contenido que se desborda
+    </div>
+     
+    <!--Hidden-->
+    <div style="overflow: hidden; width: 100px; height: 50px;">
+        Contenido que se desborda escondido
+    </div>
+      
+    <!--Scroll-->
+    <div style="overflow: scroll; width: 100px; height: 50px;">
+        Contenido que se desborda scroll
+    </div>
+
+    <!--Auto-->
+    <div style="overflow: auto; width: 100px; height: 50px;">
+        Contenido que se desborda auto
+    </div>
+      
+
+
+    <!--Visibility-->
+    <div style="visibility: visible;">Elemento visible</div>
+
+    <!--Hidden-->
+    <div style="visibility: hidden;">Elemento oculto</div>
+
+    <!--Collapse-->
+    <table>
+        <tr style="visibility: collapse;">
+          <td>Fila colapsada</td>
+        </tr>
+    </table>
+      
+
+    <!--Z-Index-->
+    <div style="position: relative; z-index: 1;">Elemento detrás</div>
+    <div style="position: relative; z-index: 2;">Elemento delante</div>
+
+    <div style="position: absolute; z-index: 1; background: red; width: 100px; height: 100px;"></div>
+    <div style="position: absolute; z-index: 2; background: blue; width: 50px; height: 50px;"></div>
+
+
 </body>
 </html>
